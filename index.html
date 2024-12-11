@@ -1,27 +1,83 @@
 <!DOCTYPE html>
-<html lang="da">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Min Første Hjemmeside</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Homepage</title>
     <style>
-        img {
-            cursor: pointer;
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            background-color: #333;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .landing {
+            text-align: center;
+            background: url('picture1.jpg') no-repeat center center/cover;
+            color: white;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .about {
+            padding: 20px;
+        }
+        .about img {
+            float: left;
+            margin-right: 20px;
+            width: 150px;
+            border-radius: 50%;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
         }
     </style>
 </head>
 <body>
-    <h1>Velkommen til min hjemmeside!</h1>
-    <p>Dette er et eksempel på en simpel HTML-side hostet på GitHub Pages.</p>
-    
-    <h2>Klik på billedet for at skifte det:</h2>
-    <img id="image1" src="billede1.jpg" alt="Billede 1" width="300" onclick="swapImage(this, 'billede2.jpg')">
-    
-    <script>
-        function swapImage(imgElement, newSrc) {
-            const currentSrc = imgElement.src;
-            imgElement.src = newSrc;
-            imgElement.setAttribute("onclick", `swapImage(this, '${currentSrc}')`);
-        }
-    </script>
+    <nav>
+        <div>My Homepage</div>
+        <div>
+            <a href="#landing">Home</a>
+            <a href="#about">About Me</a>
+        </div>
+    </nav>
+
+    <section id="landing" class="landing">
+        <h1>Welcome to My Homepage</h1>
+        <p>This is a simple example of a landing page hosted on GitHub Pages.</p>
+    </section>
+
+    <section id="about" class="about">
+        <img src="picture2.jpg" alt="Profile Picture">
+        <h2>About Me</h2>
+        <p>Hi! My name is [Your Name]. I am passionate about creating and learning new things. This website is a personal project to showcase my work and hobbies.</p>
+        <p>Feel free to explore and learn more about me. Thank you for visiting!</p>
+    </section>
+
+    <footer>
+        &copy; 2024 My Homepage | Created with HTML & CSS
+    </footer>
 </body>
 </html>
