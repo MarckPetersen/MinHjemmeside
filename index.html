@@ -2,7 +2,7 @@
 <html lang="da">
 <head>
     <meta charset="UTF-8">
-    <title>Billede Skift</title>
+    <title>Min Første Hjemmeside</title>
     <style>
         img {
             cursor: pointer;
@@ -10,8 +10,12 @@
     </style>
 </head>
 <body>
-    <h1>Klik på billedet for at skifte det</h1>
+    <h1>Velkommen til min hjemmeside!</h1>
+    <p>Dette er et eksempel på en simpel HTML-side hostet på GitHub Pages.</p>
+    
+    <h2>Klik på billedet for at skifte det:</h2>
     <img id="image1" src="billede1.jpg" alt="Billede 1" width="300" onclick="swapImage(this, 'billede2.jpg')">
+    
     <script>
         function swapImage(imgElement, newSrc) {
             const currentSrc = imgElement.src;
