@@ -2,13 +2,22 @@
 <html lang="da">
 <head>
     <meta charset="UTF-8">
-    <title>Min Første Hjemmeside</title>
+    <title>Billede Skift</title>
+    <style>
+        img {
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-    <h1>Velkommen til min hjemmeside!</h1>
-    <p>Dette er et eksempel på en simpel HTML-side hostet på GitHub Pages.</p>    
-    <h2>Her er nogle billeder:</h2>
-    <img src="billede1.jpg" alt="Beskrivelse af billede 1" width="300">
-    <img src="billede2.jpg" alt="Beskrivelse af billede 2" width="300">
+    <h1>Klik på billedet for at skifte det</h1>
+    <img id="image1" src="billede1.jpg" alt="Billede 1" width="300" onclick="swapImage(this, 'billede2.jpg')">
+    <script>
+        function swapImage(imgElement, newSrc) {
+            const currentSrc = imgElement.src;
+            imgElement.src = newSrc;
+            imgElement.setAttribute("onclick", `swapImage(this, '${currentSrc}')`);
+        }
+    </script>
 </body>
 </html>
