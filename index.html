@@ -32,7 +32,7 @@ Feature: Structure of My Homepage
         <p>This is a simple example of a landing page hosted on GitHub Pages.</p>
     </section>
 
-    Unit Test:
+    <!-- Unit Test:
     describe('Navigation Bar', () => {
         it('should contain links to Home and About Me', () => {
             const navLinks = document.querySelectorAll('nav a');
@@ -40,6 +40,8 @@ Feature: Structure of My Homepage
             expect(navLinks[0].textContent).toBe('Home');
             expect(navLinks[1].textContent).toBe('About Me');
         });
+    });
+-->
     });
 
   Scenario: About Me Page
@@ -62,14 +64,16 @@ Feature: Structure of My Homepage
     And the section should include text about the author
     <p>Hi! My name is [Your Name]. I am passionate about creating and learning new things. This website is a personal project to showcase my work and hobbies.</p>
 
-    Unit Test:
-    describe('About Me Section', () => {
-        it('should display the author image and text', () => {
-            const img = document.querySelector('.about img');
-            const text = document.querySelector('.about p').textContent;
-            expect(img.getAttribute('src')).toBe('picture2.jpg');
-            expect(text).toContain('Hi! My name is');
+    <!-- Unit Test:
+    describe('Navigation Bar', () => {
+        it('should contain links to Home and About Me', () => {
+            const navLinks = document.querySelectorAll('nav a');
+            expect(navLinks.length).toBe(2);
+            expect(navLinks[0].textContent).toBe('Home');
+            expect(navLinks[1].textContent).toBe('About Me');
         });
+    });
+-->
     });
 
   Scenario: Footer
@@ -80,10 +84,14 @@ Feature: Structure of My Homepage
     When the user scrolls to the bottom
     Then they should see a footer with the text "&copy; 2024 My Homepage | Created with HTML & CSS"
 
-    Unit Test:
-    describe('Footer', () => {
-        it('should display the correct footer text', () => {
-            const footer = document.querySelector('footer').textContent;
-            expect(footer).toBe('© 2024 My Homepage | Created with HTML & CSS');
+    <!-- Unit Test:
+    describe('Navigation Bar', () => {
+        it('should contain links to Home and About Me', () => {
+            const navLinks = document.querySelectorAll('nav a');
+            expect(navLinks.length).toBe(2);
+            expect(navLinks[0].textContent).toBe('Home');
+            expect(navLinks[1].textContent).toBe('About Me');
         });
+    });
+-->
     });
