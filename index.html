@@ -1,97 +1,100 @@
-Feature: Structure of My Homepage
+<!-- Feature: Structure of My Homepage -->
 
-  Scenario: Landing Page
-    Given a navigation bar with links
-    <nav>
-        <div>My Homepage</div>
-        <div>
-            <a href="#landing">Home</a>
-            <a href="#about">About Me</a>
-        </div>
-    </nav>
-    When the user visits the homepage
-    Then they should see a landing section
-    And the landing section should have a background image named "picture1.jpg"
-    <style>
-        .landing {
-            text-align: center;
-            background: url('picture1.jpg') no-repeat center center/cover;
-            color: white;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-    </style>
-    And the landing section should include a title "Welcome to My Homepage"
-    <section id="landing" class="landing">
-        <h1>Welcome to My Homepage</h1>
-    </section>
-    And the landing section should include a description "This is a simple example of a landing page hosted on GitHub Pages."
-    <section id="landing" class="landing">
-        <p>This is a simple example of a landing page hosted on GitHub Pages.</p>
-    </section>
+<!-- Scenario: Landing Page -->
+Scenario: Landing Page
+<!-- Given a navigation bar with links -->
+<nav>
+    <div>My Homepage</div>
+    <div>
+        <a href="#landing">Home</a>
+        <a href="#about">About Me</a>
+    </div>
+</nav>
+<!-- When the user visits the homepage -->
+<!-- Then they should see a landing section -->
+<!-- And the landing section should have a background image named \"picture1.jpg\" -->
+<style>
+    .landing {
+        text-align: center;
+        background: url('picture1.jpg') no-repeat center center/cover;
+        color: white;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+</style>
+<!-- And the landing section should include a title \"Welcome to My Homepage\" -->
+<section id="landing" class="landing">
+    <h1>Welcome to My Homepage</h1>
+</section>
+<!-- And the landing section should include a description \"This is a simple example of a landing page hosted on GitHub Pages.\" -->
+<section id="landing" class="landing">
+    <p>This is a simple example of a landing page hosted on GitHub Pages.</p>
+</section>
 
-    <!-- Unit Test (start):
-    describe('Navigation Bar', () => {
-        it('should contain links to Home and About Me', () => {
-            const navLinks = document.querySelectorAll('nav a');
-            expect(navLinks.length).toBe(2);
-            expect(navLinks[0].textContent).toBe('Home');
-            expect(navLinks[1].textContent).toBe('About Me');
-        });
+<!-- Unit Test: Navigation Bar 
+describe('Navigation Bar', () => {
+    it('should contain links to Home and About Me', () => {
+        const navLinks = document.querySelectorAll('nav a');
+        expect(navLinks.length).toBe(2);
+        expect(navLinks[0].textContent).toBe('Home');
+        expect(navLinks[1].textContent).toBe('About Me');
     });
-<!-- Unit Test (end) -->
-    });
+});
+End of Unit Test: Navigation Bar -->
+});
 
-  Scenario: About Me Page
-    Given a section titled "About Me"
-    <section id="about" class="about">
-        <h2>About Me</h2>
-    </section>
-    When the user scrolls to the "About Me" section
-    Then they should see an image named "picture2.jpg"
-    <img src="picture2.jpg" alt="Profile Picture">
-    And the image should be styled as a circular profile picture
-    <style>
-        .about img {
-            float: left;
-            margin-right: 20px;
-            width: 150px;
-            border-radius: 50%;
-        }
-    </style>
-    And the section should include text about the author
-    <p>Hi! My name is [Your Name]. I am passionate about creating and learning new things. This website is a personal project to showcase my work and hobbies.</p>
+<!-- Scenario: About Me Page -->
+<!-- Scenario: About Me Page -->
+Scenario: About Me Page
+<!-- Given a section titled \"About Me\" -->
+<section id="about" class="about">
+    <h2>About Me</h2>
+</section>
+<!-- When the user scrolls to the \"About Me\" section -->
+<!-- Then they should see an image named \"picture2.jpg\" -->
+<img src="picture2.jpg" alt="Profile Picture">
+<!-- And the image should be styled as a circular profile picture -->
+<style>
+    .about img {
+        float: left;
+        margin-right: 20px;
+        width: 150px;
+        border-radius: 50%;
+    }
+</style>
+<!-- And the section should include text about the author -->
+<p>Hi! My name is [Your Name]. I am passionate about creating and learning new things. This website is a personal project to showcase my work and hobbies.</p>
 
-    <!-- Unit Test (start):
-    describe('Navigation Bar', () => {
-        it('should contain links to Home and About Me', () => {
-            const navLinks = document.querySelectorAll('nav a');
-            expect(navLinks.length).toBe(2);
-            expect(navLinks[0].textContent).toBe('Home');
-            expect(navLinks[1].textContent).toBe('About Me');
-        });
+<!-- Unit Test: About Me Section
+describe('About Me Section', () => {
+    it('should display the author image and text', () => {
+        const img = document.querySelector('.about img');
+        const text = document.querySelector('.about p').textContent;
+        expect(img.getAttribute('src')).toBe('picture2.jpg');
+        expect(text).toContain('Hi! My name is');
     });
-<!-- Unit Test (end) -->
-    });
+});
+End of Unit Test: About Me Section -->
+});
 
+<!-- Scenario: Footer -->
+<!-- Scenario: Footer -->
 Scenario: Footer
-    Given a footer at the bottom of the page
-    <footer>
-        &copy; 2024 My Homepage | Created with HTML & CSS
-    </footer>
-    When the user scrolls to the bottom
-    Then they should see a footer with the text "&copy; 2024 My Homepage | Created with HTML & CSS"
+<!-- Given a footer at the bottom of the page -->
+<footer>
+    &copy; 2024 My Homepage | Created with HTML & CSS
+</footer>
+<!-- When the user scrolls to the bottom -->
+<!-- Then they should see a footer with the text \"&copy; 2024 My Homepage \| Created with HTML & CSS\" -->
 
-    <!-- Unit Test (start):
-    describe('Navigation Bar', () => {
-        it('should contain links to Home and About Me', () => {
-            const navLinks = document.querySelectorAll('nav a');
-            expect(navLinks.length).toBe(2);
-            expect(navLinks[0].textContent).toBe('Home');
-            expect(navLinks[1].textContent).toBe('About Me');
-        });
+<!-- Unit Test: Footer
+describe('Footer', () => {
+    it('should display the correct footer text', () => {
+        const footer = document.querySelector('footer').textContent;
+        expect(footer).toBe('© 2024 My Homepage | Created with HTML & CSS');
     });
-<!-- Unit Test (end) -->
-    });
+});
+End of Unit Test: Footer -->
+});
