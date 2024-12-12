@@ -1,4 +1,4 @@
-<!-- Feature: Structure of My Homepage
+Feature: Structure of My Homepage
 
   Scenario: Landing Page
     Given a navigation bar with links
@@ -32,7 +32,7 @@
         <p>This is a simple example of a landing page hosted on GitHub Pages.</p>
     </section>
 
-    <!-- Unit Test:
+    <!-- Unit Test (start):
     describe('Navigation Bar', () => {
         it('should contain links to Home and About Me', () => {
             const navLinks = document.querySelectorAll('nav a');
@@ -41,58 +41,57 @@
             expect(navLinks[1].textContent).toBe('About Me');
         });
     });
--->
-});
+<!-- Unit Test (end) -->
+    });
 
-Scenario: About Me Page
-  Given a section titled "About Me"
-  <section id="about" class="about">
-      <h2>About Me</h2>
-  </section>
-  When the user scrolls to the "About Me" section
-  Then they should see an image named "picture2.jpg"
-  <img src="picture2.jpg" alt="Profile Picture">
-  And the image should be styled as a circular profile picture
-  <style>
-      .about img {
-          float: left;
-          margin-right: 20px;
-          width: 150px;
-          border-radius: 50%;
-      }
-  </style>
-  And the section should include text about the author
-  <p>Hi! My name is [Your Name]. I am passionate about creating and learning new things. This website is a personal project to showcase my work and hobbies.</p>
+  Scenario: About Me Page
+    Given a section titled "About Me"
+    <section id="about" class="about">
+        <h2>About Me</h2>
+    </section>
+    When the user scrolls to the "About Me" section
+    Then they should see an image named "picture2.jpg"
+    <img src="picture2.jpg" alt="Profile Picture">
+    And the image should be styled as a circular profile picture
+    <style>
+        .about img {
+            float: left;
+            margin-right: 20px;
+            width: 150px;
+            border-radius: 50%;
+        }
+    </style>
+    And the section should include text about the author
+    <p>Hi! My name is [Your Name]. I am passionate about creating and learning new things. This website is a personal project to showcase my work and hobbies.</p>
 
-  <!-- Unit Test:
-  describe('Navigation Bar', () => {
-      it('should contain links to Home and About Me', () => {
-          const navLinks = document.querySelectorAll('nav a');
-          expect(navLinks.length).toBe(2);
-          expect(navLinks[0].textContent).toBe('Home');
-          expect(navLinks[1].textContent).toBe('About Me');
-      });
-  });
--->
-  });
+    <!-- Unit Test (start):
+    describe('Navigation Bar', () => {
+        it('should contain links to Home and About Me', () => {
+            const navLinks = document.querySelectorAll('nav a');
+            expect(navLinks.length).toBe(2);
+            expect(navLinks[0].textContent).toBe('Home');
+            expect(navLinks[1].textContent).toBe('About Me');
+        });
+    });
+<!-- Unit Test (end) -->
+    });
 
--->
 Scenario: Footer
-  Given a footer at the bottom of the page
-  <footer>
-      &copy; 2024 My Homepage | Created with HTML & CSS
-  </footer>
-  When the user scrolls to the bottom
-  Then they should see a footer with the text "&copy; 2024 My Homepage | Created with HTML & CSS"
+    Given a footer at the bottom of the page
+    <footer>
+        &copy; 2024 My Homepage | Created with HTML & CSS
+    </footer>
+    When the user scrolls to the bottom
+    Then they should see a footer with the text "&copy; 2024 My Homepage | Created with HTML & CSS"
 
-  <!-- Unit Test:
-  describe('Navigation Bar', () => {
-      it('should contain links to Home and About Me', () => {
-          const navLinks = document.querySelectorAll('nav a');
-          expect(navLinks.length).toBe(2);
-          expect(navLinks[0].textContent).toBe('Home');
-          expect(navLinks[1].textContent).toBe('About Me');
-      });
-  });
--->
-  });
+    <!-- Unit Test (start):
+    describe('Navigation Bar', () => {
+        it('should contain links to Home and About Me', () => {
+            const navLinks = document.querySelectorAll('nav a');
+            expect(navLinks.length).toBe(2);
+            expect(navLinks[0].textContent).toBe('Home');
+            expect(navLinks[1].textContent).toBe('About Me');
+        });
+    });
+<!-- Unit Test (end) -->
+    });
